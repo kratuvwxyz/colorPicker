@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta title="Color Picker" />
+		<title>Color Picker by Desaign Studio </title>
+		<!-- CSS -->
+		<link href="assets/css/bootstrap.css" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" />
+		<!-- GOOGLE Analytics -->
+	</head>
+	<body>
+		<div class="container-fluid" style="background-color: #ffffff;">
+			<div class="row">
+				<div class="col-1 color1" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color2" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color3" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color4" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color5" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color6" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color7" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color8" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color9" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color10" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color11" style="height: 10vh; display: inline-block;"></div>
+				<div class="col-1 color12" style="height: 10vh; display: inline-block;"></div>
+			</div>
+		</div>
+		<div class="main d-flex justify-content-center align-items-center" style="height: 90vh; width: 100vw;">
+			<div class="text-center bg-light p-2" style="width: 80vw;">
+				<div class="redBox box">
+					<input type="range" class="form-range red-range p-2" min="0" max="255" step="1" id="customRange3"
+						style="background: #ff0000;">
+				</div>
+				<div class="greenBox box">
+					<input type="range" class="form-range green-range p-2" min="0" max="255" step="1" id="customRange3"
+						style="background: #00ff00;">
+				</div>
+				<div class="blueBox box">
+					<input type="range" class="form-range blue-range p-2" min="0" max="255" step="1" id="customRange3"
+						style="background: #0000ff;">
+				</div>
+				<div onclick="haxCode()" class="haxCode h3 btn btn-secondary" title="Click to Clipboard"></div>
+			</div>
+		</div>
+		
+		<!-- JS -->
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
