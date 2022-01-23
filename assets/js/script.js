@@ -2,20 +2,17 @@ let redRange = 127, greenRange = 127, blueRange = 127, hueRange = 0, saturationR
 
 $(document).on('input', '.red-range', function () {
 	redRange = $(this).val();
-	$(".redNumber").text(redRange);
-	$(".redPercent").text(Math.floor(redRange*100/255));
+	
 	bColor();
 });
 $(document).on('input', '.green-range', function () {
 	greenRange = $(this).val();
-	$(".greenNumber").text(greenRange);
-	$(".greenPercent").text(Math.floor(greenRange*100/255));
+	
 	bColor();
 });
 $(document).on('input', '.blue-range', function () {
 	blueRange = $(this).val();
-	$(".blueNumber").text(blueRange);
-	$(".bluePercent").text(Math.floor(blueRange*100/255));
+	
 	bColor();
 });
 $(document).on('input', '.hue-range', function () {
@@ -35,15 +32,18 @@ $(document).on('input', '.lightness-range', function () {
 });
 
 function bColor() {
+	$(".redNumber").text(redRange);
+	$(".redPercent").text(Math.floor(redRange*100/255));
+	$(".greenNumber").text(greenRange);
+	$(".greenPercent").text(Math.floor(greenRange*100/255));
+	$(".blueNumber").text(blueRange);
+	$(".bluePercent").text(Math.floor(blueRange*100/255));
 	$(".colorBoxes").empty();
 	let h = rgbToHex(redRange, greenRange, blueRange);
 	$('.haxCode').text(h);
 	$('.color1').css('background-color', `rgb(${redRange},0,0)`);
 	$('.color2').css('background-color', `rgb(0,${greenRange},0)`);
 	$('.color3').css('background-color', `rgb(0,0,${blueRange})`);
-	$('.color4').css('background-color', `hsl(${hueRange},${saturationRange}%,${lightnessRange}%)`);
-	$('.color5').css('background-color', `hsl(${hueRange},${saturationRange}%,${lightnessRange}%)`);
-	$('.color6').css('background-color', `hsl(${hueRange},${saturationRange}%,${lightnessRange}%)`);
 	for(let i = 0; i < 12; i++) {
 		let a = $('<div>');
 		a.addClass('col-1 colorCols color-' + (i + 1));
@@ -57,6 +57,10 @@ function bColor() {
 		$(".colorBoxes").append(a);
 		
 	}
+	hslToRgb(hueRange, saturationRange, lightnessRange);
+	$('.color4').css('background-color', `hsl(${hueRange},${saturationRange}%,${lightnessRange}%)`);
+	$('.color5').css('background-color', `hsl(${hueRange},${saturationRange}%,${lightnessRange}%)`);
+	$('.color6').css('background-color', `hsl(${hueRange},${saturationRange}%,${lightnessRange}%)`);
 	$('.color-1').css('background-color', `rgb(255,255,255)`);
 	$('.color-12').css('background-color', `rgb(0,0,0)`);
 	let cc = (redRange*0.3 + greenRange*0.6 + blueRange*0.3) > 186 ? '#000000' : '#ffffff';
@@ -85,28 +89,16 @@ const haxCode = () => {
  * @return  {Array}           The RGB representation
  */
 function hslToRgb(h, s, l){
-	var r, g, b;
-
-	if(s == 0){
-		r = g = b = l; // achromatic
-	}else{
-		var hue2rgb = function hue2rgb(p, q, t){
-			if(t < 0) t += 1;
-			if(t > 1) t -= 1;
-			if(t < 1/6) return p + (q - p) * 6 * t;
-			if(t < 1/2) return q;
-			if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-			return p;
-		}
-
-		var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-		var p = 2 * l - q;
-		r = hue2rgb(p, q, h + 1/3);
-		g = hue2rgb(p, q, h);
-		b = hue2rgb(p, q, h - 1/3);
-	}
-
-	return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+	s /= 100;
+    l /= 100;
+    const k = n => (n + h / 30) % 12;
+    const a = s * Math.min(l, 1 - l);
+    const f = n =>
+		l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+  	  // return [255 * f(0), 255 * f(8), 255 * f(4)];
+  	redRange = Math.floor(f(0) * 255);
+  	greenRange = Math.floor(f(8) * 255);
+  	blueRange = Math.floor(f(4) * 255);
 }
 
 /**
