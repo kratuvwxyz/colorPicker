@@ -1,8 +1,8 @@
 {
-  "version": "...",
-  "name": "... by Desaign Studio",
+  "version": "Color Picker",
+  "name": "Color Picker by Desaign Studio",
   "launch_path": "./index.html",
-  "description": "... by Desaign Studio",
+  "description": "Color Picker by Desaign Studio",
   "icons": {
     "128": "https://desaign.app/clients/cli/images/1x/black.png"
   },
@@ -15,8 +15,8 @@
   "permissions": {},
   "locales": {
     "en": {
-      "name": "... by Desaign Studio",
-      "description": "... by Desaign Studio"
+      "name": "Color Picker by Desaign Studio",
+      "description": "Color Picker by Desaign Studio"
     }
   }
 }

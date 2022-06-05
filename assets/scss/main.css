@@ -1,0 +1,29 @@
+body {
+  font-family: monospace;
+  width: 100%;
+}
+
+/* red green blue */
+.color-red, .color-green, .color-blue {
+  padding: 10vh 5vh;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 991px) {
+  .color-red, .color-green, .color-blue {
+    padding: 5vh 5vh;
+  }
+}
+
+.color-hue, .color-satu, .color-light {
+  padding: 10vh 5vh;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 991px) {
+  .color-hue, .color-satu, .color-light {
+    padding: 5vh 5vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */
