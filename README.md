@@ -1,4 +1,4 @@
-## .... by Desaign Studio
+## Color Picker by Desaign Studio
 
 Descriptions
 
@@ -6,16 +6,15 @@ Descriptions
 
 ### Version
 
-- **0000000000**
-☐ Last Update
+✔ Last Update @done (6/5/2022, 2:12:05 PM)
 
 ### Framework
-
-- 
+ 
+- HTML5, CSS3, JavaScript, SCSS
 
 ### Built With
 
-- 
+- jQuery, Bootstrap, Google Fonts, SVG
 
 ### Software
 
@@ -24,7 +23,8 @@ Descriptions
 
 ### Credits
 
-- 
+- https://stackoverflow.com/questions/18389224/how-to-style-html5-range-input-to-have-different-color-before-and-after-slider
+- https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/
 
 ### CONTRIBUTE
 
@@ -36,7 +36,7 @@ Descriptions
 
 ### Moving Forward
 
-- 
+- Version 2 with more data functionality and api connection
 
 ## CONTACT
 

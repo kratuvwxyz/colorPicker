@@ -1,0 +1,35 @@
+## Added:
+✔ Red, Green and Blue colors slider @done (6/5/2022, 2:33:32 PM)
+✔ RGB to Hax code convertor @done (6/5/2022, 2:33:37 PM)
+✔ Create a button that copy the value of HAX code @done (6/5/2022, 2:33:38 PM)
+✔ Gradient colors bar for the same color @done (6/5/2022, 2:33:39 PM)
+✔ Hue, Saturation and Lightness slider @done (6/5/2022, 2:33:42 PM)
+✔ Change value of rgb when hsl slider change @done (6/5/2022, 2:33:44 PM)
+✔ Background gradient with current color @done (6/5/2022, 2:33:45 PM)
+✔ Font color change when color shade is light or dark @done (6/5/2022, 2:33:46 PM)
+
+## Changed:
+✔ Width of the gradient @done (6/5/2022, 2:33:52 PM)
+✔ Responsiveness of rgb and hsl @done (6/5/2022, 2:33:55 PM)
+
+## Removed:
+✔ SVG pattern @done (6/5/2022, 2:33:56 PM)
+
+## Fixed:
+✔ When HSL is change RGB correct value update @done (6/5/2022, 2:34:05 PM)
+
+## Security:
+☐ Google analytics @high
+
+## Released:
+
+    
+## Requested:
+☐ add opacity input slider to get opacity value 
+☐ opacity haxA code generate
+☐ connect database to save one 
+☐ create svg pattern with colors like https://heropatterns.com/
+☐ create gradient with colors like https://cssgradient.io/
+☐ rgb to hsl convertor use https://www.30secondsofcode.org/js/s/rgb-to-hsl?from=recommendations
+
+✔ Last Update @done (6/5/2022, 2:37:06 PM)
